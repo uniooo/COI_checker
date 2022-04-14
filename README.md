@@ -1,6 +1,10 @@
 # COI_checker
 An automatic COI checker to find the conflict of interest for conference submissions.
 
+Forked from [Hanchen-Wang/COI_checker](https://github.com/Hanchen-Wang/COI_checker).
+
+Now it can batch check, and some existing bugs have been fixed.
+
 ## Usage
 
 ```
