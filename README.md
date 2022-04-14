@@ -17,7 +17,7 @@ python find_coi.py --xml_path ./data/ --search_years 10 --pc_file ./data/pc_memb
 
 <xml_path> is the path of downloaded DBLP author files. Current, this checker only supports the xml format. I provide serveral downloaded pages of the professors in the data folder.
 
-'search_years' is a string with the number of years you want to check. e.g., 3
+'search_years' is a string with the number of years you want to check. e.g., 3.
  
 <pc_file> is a xlsx file contains the information of PC members. You can build this by copying the coi name list from CMT and pasting in Excel. An example PC member file is provided in the data folder.
 
