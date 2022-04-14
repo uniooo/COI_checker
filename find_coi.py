@@ -1,53 +1,54 @@
 import argparse
-import re
 from openpyxl import load_workbook
+import time
+import os
+from xml.dom.minidom import parse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--file_name', type=str, default='./data/xuemin_lin.xml',
-                    help='the name of the input file to find coi. Currently only support the xml file from dblp')
-parser.add_argument('--years', type=str, default='2019,2020,2021',
-                    help='the years need to check for COI.')
+parser.add_argument('--xml_path', type=str, default='./data/',
+                    help='the path of files to find coi. Currently only support the xml file from dblp')
+parser.add_argument('--search_years', type=int, default=10,
+                    help='number of years queried to check for COI.')
 parser.add_argument('--pc_file', type=str, default='./data/pc_members.xlsx',
                     help='file with all pc members')
 
-
-def check_conflict(first_name, last_name, coi_set):
-    for coi_name in coi_set:
-        if first_name in coi_name and last_name in coi_name:
-            return True
-    return False
-
+def get_paper(path, query_years):
+    xml_data = parse(path)
+    rootNode = xml_data.documentElement
+    nodes = list(rootNode.getElementsByTagName('article')) + list(rootNode.getElementsByTagName('inproceedings'))
+    coi_authors = set()
+    
+    for node in nodes:
+        year = node.getElementsByTagName('year')[0].childNodes[0].data
+        if(year not in query_years):
+            continue
+        authors = node.getElementsByTagName('author')
+        for author in authors:
+            name = author.childNodes[0].data.rstrip('0123456789').rstrip()
+            coi_authors.update([name])
+    return list(coi_authors)
 
 args = parser.parse_args()
-years = args.years.split(',')
-coi_authors = set()
-with open(args.file_name) as f:
-    lines = f.readlines()
-    num_lines = len(lines)
-    i = 0
-    while i < num_lines:
-        current_line = lines[i]
-        # print(current_line)
-        if '<r>' in current_line:
-            temp_set = set()
-            while '</r>' not in current_line:
-                if '</author>' in current_line:
-                    # print(re.split('<|>',current_line))
-                    temp_set.add(re.split('<|>',current_line)[2])
-                elif '<year>' in current_line:
-                    paper_year = re.split('<|>',current_line)[2]
-                    # print(paper_year)
-                    if paper_year in years:
-                        coi_authors = coi_authors.union(temp_set)
-                i+=1
-                current_line = lines[i]
-        i+=1
+years = list(map(str,[i for i in range(time.localtime(time.time())[0] - args.search_years, time.localtime(time.time())[0]+1)]))
+names = os.listdir(args.xml_path)
 
-# print(coi_authors)
+coi_authors_dict = dict()
+for name in names:
+    if(name[-4:] != '.xml'):
+        continue
+    coi_authors_list = get_paper(args.xml_path+name, years)
+    coi_authors_dict[name] = coi_authors_list
+
+result = dict()
 wb = load_workbook(filename = args.pc_file)
 pc_sheet = wb['Sheet1']
 for row in pc_sheet.values:
-    name = row[0]+' '+row[1]
-    if check_conflict(row[0], row[1], coi_authors):
-        print(name)
-
+    check_name = row[0]+' '+row[1]
+    for name in coi_authors_dict:
+        if(check_name in coi_authors_dict[name]):
+            if(name not in result):
+                result[name] = list()
+            result[name].append(check_name)
+for name in result:
+    for coi in result[name]:
+        print(name + ' : ' + coi)
