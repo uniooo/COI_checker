@@ -9,7 +9,7 @@ parser.add_argument('--xml_path', type=str, default='./data/',
                     help='the path of files to find coi. Currently only support the xml file from dblp')
 parser.add_argument('--search_years', type=int, default=3,
                     help='number of years queried to check for COI.')
-parser.add_argument('-n', '--years_and_times', nargs='+', default=[],
+parser.add_argument('-n', '--times_and_years', nargs='+', default=[],
                     help='[a, b] means co-auther >= a times in last b years.')
 parser.add_argument('--pc_file', type=str, default='./data/pc_members.xlsx',
                     help='file with all pc members')
@@ -72,11 +72,11 @@ if __name__ == '__main__':
     print('co-auther in last', args.search_years, 'year(s):')
     for name in result_dict1:
         print(name, ':', str(result_dict1[name]))
-    if(args.years_and_times != []):
-        args.years_and_times = list(map(int, args.years_and_times))
+    if(args.times_and_years != []):
+        args.times_and_years = list(map(int, args.times_and_years))
         print()
-        result_dict2 = check(args.years_and_times[1], time_flag = args.years_and_times[0])
-        print('co-auther >=', args.years_and_times[0], 'time(s) in last', args.years_and_times[1], 'year(s):')
+        result_dict2 = check(args.times_and_years[1], time_flag = args.times_and_years[0])
+        print('co-auther >=', args.times_and_years[0], 'time(s) in last', args.times_and_years[1], 'year(s):')
         for name in result_dict2:
             print(name, ':', str(result_dict2[name]))
     
