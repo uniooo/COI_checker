@@ -17,7 +17,7 @@ python find_coi.py --xml_path ./data/ --search_years 10 --pc_file ./data/pc_memb
 
 If need to check co-authers in last 3 years or >= 4 times in last 10 years:
 ```
-python find_coi.py --xml_path ./data/ --search_years 3 --years_and_times 4 10 --pc_file ./data/pc_members.xlsx
+python find_coi.py --xml_path ./data/ --search_years 3 --times_and_years 4 10 --pc_file ./data/pc_members.xlsx
 ```
 
 <xml_path> is the path of downloaded DBLP author files. Current, this checker only supports the xml format. I provide serveral downloaded pages of the professors in the data folder.
