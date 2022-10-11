@@ -3,15 +3,15 @@ from openpyxl import load_workbook
 import time
 import os
 from xml.dom.minidom import parse
-
+root_path, _ = os.path.split(os.path.abspath(__file__))
 parser = argparse.ArgumentParser()
-parser.add_argument('--xml_path', type=str, default='./data/',
+parser.add_argument('--xml_path', type=str, default= root_path+'/data/',
                     help='the path of files to find coi. Currently only support the xml file from dblp')
-parser.add_argument('--search_years', type=int, default=3,
+parser.add_argument('--search_years', type=int, default=2,
                     help='number of years queried to check for COI.')
 parser.add_argument('-n', '--times_and_years', nargs='+', default=[],
                     help='[a, b] means co-auther >= a times in last b years.')
-parser.add_argument('--pc_file', type=str, default='./data/pc_members.xlsx',
+parser.add_argument('--pc_file', type=str, default=root_path+'/data/pc_members.xlsx',
                     help='file with all pc members')
 
 def get_paper(path, query_years):
