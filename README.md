@@ -1,4 +1,6 @@
 # COI_checker
+
+
 An automatic COI checker to find the conflict of interest for conference submissions.
 
 Forked from [Hanchen-Wang/COI_checker](https://github.com/Hanchen-Wang/COI_checker).
@@ -6,6 +8,23 @@ Forked from [Hanchen-Wang/COI_checker](https://github.com/Hanchen-Wang/COI_check
 Now it can batch check, and some existing bugs have been fixed.
 
 ## Usage
+---
+### Github Actions version(Online)
+1. fork this project
+2. update 
+   
+   `.github/workflows/main.yml`:
+   ```
+    git config --global user.email xxx
+    git config --global user.name xxx
+   ```
+   
+   `settings.py`
+
+3. upload `data/pc_members.xlsx`
+
+---
+### Local
 
 ```
 python find_coi.py --xml_path <xml_path> --search_years <search_years> --pc_file <pc_file>
