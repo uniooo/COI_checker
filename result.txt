@@ -1,0 +1,6 @@
+co-auther in last 2 year(s):
+lu_qin.xml : ['Chen Zhang', 'Dong Wen', 'Guoren Wang', 'Jeffrey Xu Yu', 'Lijun Chang', 'Reynold Cheng', 'Wei Wang', 'Wenjie Zhang', 'Xiaokui Xiao', 'Xuemin Lin', 'Ye Yuan', 'Yuanyuan Zhu', 'Zhiwei Zhang']
+ying_zhang.xml : ['Chen Zhang', 'Dong Wen', 'Lijun Chang', 'Reynold Cheng', 'Wei Wang', 'Wenjie Zhang', 'Xuemin Lin']
+co-auther in last 2 year(s):
+lu_qin.xml : ['Chen Zhang', 'Dong Wen', 'Guoren Wang', 'Jeffrey Xu Yu', 'Lijun Chang', 'Reynold Cheng', 'Wei Wang', 'Wenjie Zhang', 'Xiaokui Xiao', 'Xuemin Lin', 'Ye Yuan', 'Yuanyuan Zhu', 'Zhiwei Zhang']
+ying_zhang.xml : ['Chen Zhang', 'Dong Wen', 'Lijun Chang', 'Reynold Cheng', 'Wei Wang', 'Wenjie Zhang', 'Xuemin Lin']
