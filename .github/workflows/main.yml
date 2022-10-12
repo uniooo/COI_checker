@@ -6,7 +6,9 @@ name: Check COI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main/data" ]
+    branches: [ "main" ]
+    paths:
+      - data/pc_members.xlsx
   # pull_request:
   #   branches: [ "main" ]
 
