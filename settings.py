@@ -5,4 +5,6 @@ dblp_xml_dict = {
     'lu_qin':'https://dblp.org/pid/51/5585.xml',
     'wenjie_zhang': 'https://dblp.org/pid/98/5684-1.xml',
     'xiaoyang_wang':'https://dblp.org/pid/81/1832-2.xml',
+    'zhao_li':'https://dblp.org/pid/l/ZhaoLi-7.xml',
+    'jian_liao':'https://dblp.org/pid/72/186.xml'
     } #find authors in dblp.org, and get their XML export bibliography url
