@@ -1,15 +1,5 @@
 co-auther in last 2 year(s):
-lu_qin.xml : ['Lu Qin', 'Wenjie Zhang', 'Hong Cheng', 'Kai Wang', 'Long Yuan', 'Reynold Cheng', 'Ye Yuan', 'Yixiang Fang', 'You Peng', 'Zhiwei Zhang']
-ying_zhang.xml : ['Lu Qin', 'Wenjie Zhang', 'Xiaoyang Wang', 'Kai Wang', 'Long Yuan', 'Reynold Cheng', 'Yixiang Fang', 'You Peng']
-
-co-auther >= 4 time(s) in last 10 year(s):
-lu_qin.xml : ['Lu Qin', 'Wenjie Zhang', 'Hong Cheng', 'Kai Wang', 'Long Yuan', 'Ye Yuan', 'You Peng', 'Zhiwei Zhang']
-ying_zhang.xml : ['Lu Qin', 'Wenjie Zhang', 'Xiaoyang Wang', 'Kai Wang', 'Long Yuan', 'Yixiang Fang', 'You Peng']
-
-Total result:
-lu_qin.xml :
-{'Wenjie Zhang', 'Hong Cheng', 'Kai Wang', 'Yixiang Fang', 'Ye Yuan', 'Zhiwei Zhang', 'You Peng', 'Long Yuan', 'Reynold Cheng', 'Lu Qin'}
-
-ying_zhang.xml :
-{'Wenjie Zhang', 'Kai Wang', 'Yixiang Fang', 'Xiaoyang Wang', 'You Peng', 'Long Yuan', 'Reynold Cheng', 'Lu Qin'}
-
+wenjie_zhang.xml : ['Defu Lian', 'Xiaoyang Wang', 'Xin Cao']
+lu_qin.xml : ['Defu Lian', 'Xin Cao']
+ying_zhang.xml : ['Defu Lian', 'Jianbin Qin', 'Xiaoyang Wang']
+xiaoyang_wang.xml : ['Defu Lian', 'Xiaoyang Wang']
