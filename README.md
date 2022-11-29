@@ -11,7 +11,8 @@ Now it can batch check, and some existing bugs have been fixed.
 ---
 ### Github Actions version(Online)
 1. fork this project
-2. update 
+2. allow actions
+3. update 
    
    `.github/workflows/main.yml`:
    ```
@@ -21,7 +22,7 @@ Now it can batch check, and some existing bugs have been fixed.
    
    `settings.py`
 
-3. upload `data/pc_members.xlsx`
+4. upload `data/pc_members.xlsx`
 
 ---
 ### Local
