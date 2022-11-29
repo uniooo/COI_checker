@@ -1,7 +1,35 @@
-co-auther in last 2 year(s):
-xuemin_lin1.xml : ['Wenjie Zhang', 'Cyrus Shahabi', 'Dong Wen', 'Fan Zhang', 'Guoren Wang', 'Kunsoo Park', 'Lei Chen', 'Lijun Chang', 'Shiyu Yang', 'Wook-Shin Han', 'Xin Cao', 'Xin Huang']
-ying_zhang.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Gao Cong', 'Lijun Chang', 'Ronghua Li', 'Xin Huang']
+co-auther in last 3 year(s):
+zhengping_qian.xml : ['Wenjie Zhang', 'Bin Cui', 'Dong Wen', 'Gao Cong']
+xuemin_lin1.xml : ['Wenjie Zhang', 'Cyrus Shahabi', 'Dong Wen', 'Fan Zhang', 'Guoren Wang', 'Jeffrey Xu Yu', 'Kunsoo Park', 'Lei Chen', 'Lijun Chang', 'Shiyu Yang', 'Wook-Shin Han', 'Xin Cao', 'Xin Huang']
+ying_zhang.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Gao Cong', 'Jeffrey Xu Yu', 'Lijun Chang', 'Ronghua Li', 'Xin Cao', 'Xin Huang']
 peilun_yang.xml : ['Wenjie Zhang']
 wenjie_zhang.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Guoren Wang', 'Lei Chen', 'Lijun Chang', 'Shiyu Yang', 'Xin Cao', 'Xin Huang']
-zhengping_qian.xml : ['Bin Cui', 'Dong Wen', 'Gao Cong']
 xuemin_lin3.xml : ['Fan Zhang']
+
+co-auther >= 4 time(s) in last 10 year(s):
+zhengping_qian.xml : ['Bin Cui']
+xuemin_lin1.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Jeffrey Xu Yu', 'Lei Chen', 'Lijun Chang', 'Shiyu Yang', 'Xin Cao']
+ying_zhang.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Jeffrey Xu Yu', 'Lijun Chang', 'Shiyu Yang']
+peilun_yang.xml : []
+wenjie_zhang.xml : ['Wenjie Zhang', 'Dong Wen', 'Fan Zhang', 'Jeffrey Xu Yu', 'Lei Chen', 'Lijun Chang', 'Shiyu Yang', 'Xin Cao']
+xuemin_lin3.xml : []
+
+Total result:
+zhengping_qian.xml :
+{'Wenjie Zhang', 'Bin Cui', 'Dong Wen', 'Gao Cong'}
+
+xuemin_lin1.xml :
+{'Dong Wen', 'Xin Cao', 'Shiyu Yang', 'Wook-Shin Han', 'Jeffrey Xu Yu', 'Kunsoo Park', 'Cyrus Shahabi', 'Wenjie Zhang', 'Xin Huang', 'Guoren Wang', 'Lijun Chang', 'Fan Zhang', 'Lei Chen'}
+
+ying_zhang.xml :
+{'Dong Wen', 'Ronghua Li', 'Xin Cao', 'Shiyu Yang', 'Jeffrey Xu Yu', 'Wenjie Zhang', 'Xin Huang', 'Fan Zhang', 'Lijun Chang', 'Gao Cong'}
+
+peilun_yang.xml :
+{'Wenjie Zhang'}
+
+wenjie_zhang.xml :
+{'Dong Wen', 'Xin Cao', 'Shiyu Yang', 'Jeffrey Xu Yu', 'Wenjie Zhang', 'Xin Huang', 'Guoren Wang', 'Lijun Chang', 'Fan Zhang', 'Lei Chen'}
+
+xuemin_lin3.xml :
+{'Fan Zhang'}
+
