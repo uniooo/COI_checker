@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script> -->
+    <script type="text/javascript" src="tabulator.js"></script>
+    <script type="text/javascript" src="bokeh-2.4.2.js"></script>
+    <script type="text/javascript" src="bokeh-widgets-2.4.2.min.js"></script>
+    <script type="text/javascript" src="bokeh-tables-2.4.2.min.js"></script>
+    <script type="text/javascript" src="panel.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config>
+        packages = [
+        "pandas",
+        "panel",
+        "openpyxl"
+        ]
+    </py-config>
+    <title>COI Checker</title>
+</head>
+
+<body>
+    <h1>COI Checker</h1>
+    <div>
+        <a href="https://github.com/yujianke100/COI_checker" target="_blank">Github Actions version, offline version and more detailed
+            introduction</a>
+    </div>
+    <div, style="margin-top: 30px;display: block;">
+        <label for="years">co-auther years:</label>
+        <input id="years" class="py-input" type="number" , value="3", style="width: 40px;">
+        <label for="times">co-auther times:</label>
+        <input id="times" class="py-input" type="number", style="width: 40px;">
+        <label for="time-years">co-auther times in years:</label>
+        <input id="times-years" class="py-input" type="number", style="width: 40px;">
+    </div>
+    <textarea name="dblp" id="dblp" class="py-input" rows="5" cols="30" wrap="soft" ,
+        style="width: 700px; height: 300px;margin-top: 30px;margin-bottom: 30px;display: block;">
+'ying_zhang':'https://dblp.org/pid/13/6769-1.xml',
+'lu_qin':'https://dblp.org/pid/51/5585.xml',
+'wenjie_zhang': 'https://dblp.org/pid/98/5684-1.xml',
+'peilun_yang': 'https://dblp.uni-trier.de/pid/292/2928.xml',
+'xuemin_lin1': 'https://dblp.uni-trier.de/pid/l/LinXuemin.xml',
+'xuemin_lin2': 'https://dblp.uni-trier.de/pid/305/2626.xml',
+'xuemin_lin3': 'https://dblp.uni-trier.de/pid/305/2626-3.xml',
+'xiaoyang_wang':'https://dblp.org/pid/81/1832-2.xml',
+</textarea>
+    <div>
+        <div style="margin-left: 10px; display: inline-block; font-size: large;">upload pc member excel file:</div>
+        <div id="fileinput" style="display: inline-block"></div>
+        <div id="upload" style="margin-top: 30px;"></div>
+    </div>
+    <py-script src="./main.py"></py-script>
+
+</body>
+
+</html>

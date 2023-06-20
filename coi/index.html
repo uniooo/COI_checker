@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>COI Checker</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script> -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <style>
+        .result div:nth-child(odd) {
+          background-color: #F0F0F0;
+        }
+        .result div:nth-child(even) {
+          background-color: #CCC;
+        }
+    </style>
+  </head>
+  <body>
+    <!-- <input type="file" id="input" accept=".xlsx"/>
+    <button onclick="readxlsx()">Check COI</button>
+    
+    <label for="myNumber">check year:</label>
+    <input type="number" name="quantity" id="myNumber" min="1" step="1" value="3">
+
+    <textarea id="urls" rows="6" cols="80"></textarea>
+
+    <div id="result"></div> -->
+
+    <h1>COI Checker</h1>
+    <div>
+        <a href="https://github.com/yujianke100/COI_checker" target="_blank">Github Actions version, offline version and more detailed
+            introduction</a>
+    </div>
+    <div, style="margin-top: 30px;display: block;">
+        <label for="years">co-auther years:</label>
+        <input id="years" type="number" min="1" step="1" value="3" style="width: 40px;">
+        <label for="times">co-auther times:</label>
+        <input id="times" type="number" style="width: 40px;">
+        <label for="time-years">co-auther times in years:</label>
+        <input id="times-years" type="number" style="width: 40px;">
+    </div>
+    <textarea name="urls" id="urls" rows="5" cols="30" wrap="soft" ,
+        style="width: 700px; height: 300px;margin-top: 30px;margin-bottom: 30px;display: block;">
+ying_zhang:https://dblp.org/pid/13/6769-1.xml
+lu_qin:https://dblp.org/pid/51/5585.xml
+wenjie_zhang:https://dblp.org/pid/98/5684-1.xml
+peilun_yang:https://dblp.uni-trier.de/pid/292/2928.xml
+xuemin_lin1:https://dblp.uni-trier.de/pid/l/LinXuemin.xml
+xuemin_lin2:https://dblp.uni-trier.de/pid/305/2626.xml
+xuemin_lin3:https://dblp.uni-trier.de/pid/305/2626-3.xml
+xiaoyang_wang:https://dblp.org/pid/81/1832-2.xml
+</textarea>
+    <div>
+        <input type="file" id="input" accept=".xlsx"/>
+        <button onclick="readXlsx()">Check COI</button>
+    </div>
+    <div id="result" class="result"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
