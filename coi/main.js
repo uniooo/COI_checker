@@ -17,8 +17,10 @@ function readXlsx() {
     var sheet = workbook.Sheets[workbook.SheetNames[0]];
     var range = XLSX.utils.decode_range(sheet["!ref"]);
     for (let rowNum = range.s.r; rowNum <= range.e.r; rowNum++) {
-      var firstName = sheet[XLSX.utils.encode_cell({ r: rowNum, c: 0 })].v;
-      var lastName = sheet[XLSX.utils.encode_cell({ r: rowNum, c: 1 })].v;
+      var cell = sheet[XLSX.utils.encode_cell({ r: rowNum, c: 0 })];
+      var firstName = cell ? cell.v : "";
+      cell = sheet[XLSX.utils.encode_cell({ r: rowNum, c: 1 })];
+      var lastName = cell ? cell.v : "";
       if (firstName == "") {
         continue;
       }
