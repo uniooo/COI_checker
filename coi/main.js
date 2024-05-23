@@ -30,6 +30,7 @@ function readXlsx() {
     xmlCoAuthors = readXML();
 
     let checkAuthors = Object.keys(xmlCoAuthors);
+    let resultFound = false; // 用于检查是否有结果
     for (var i = 0; i < checkAuthors.length; i++) {
       let resultYearBox = {};
       let resultTimeBox = {};
@@ -58,10 +59,10 @@ function readXlsx() {
           str1 += `${key}, `;
         }
       }
-      if(str1 != ""){
+      if (str1 != "") {
         output.innerHTML += `<div style="padding:20px;"><b><i>${thisAuthor}</i>'s co-authors in ${checkYearNum} year(s):</b> </br> ${str1}</div>`;
+        resultFound = true;
       }
-      
 
       if (coTime != "" && coTimeYears != "") {
         str2 = "";
@@ -70,8 +71,9 @@ function readXlsx() {
             str2 += `${key}, `;
           }
         }
-        if(str2 != ""){
+        if (str2 != "") {
           output.innerHTML += `<div style="padding:20px;"><b><i>${thisAuthor}</i>'s co-authors time(s) >= ${coTime} in ${coTimeYears} year(s):</b> </br> ${str2}</div>`;
+          resultFound = true;
         }
 
         str = "";
@@ -81,12 +83,17 @@ function readXlsx() {
         allAuthors.forEach(function (value) {
           str += `${value}, `;
         });
-        if(str != ""){
+        if (str != "") {
           output.innerHTML += `<div style="padding:20px;"><b><i>${thisAuthor}</i>'s all co-authors required:</b> </br> ${str}</div>`;
+          resultFound = true;
         }
       }
 
       // output.innerHTML += "</br>";
+    }
+
+    if (!resultFound) {
+      output.innerHTML += `<div style="padding:20px;"><b>No results found for the given criteria.</b></div>`;
     }
   };
 
